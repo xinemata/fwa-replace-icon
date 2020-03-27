@@ -1,0 +1,70 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!--     import p5 -->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        A Dream of the Future
+      </h1>
+    </header>
+
+    <main>
+      
+      <div><a href="/">draw</a> | <a href="/logs">gallery</a></div>
+<!--     <p>
+      latitude: <span id="latitude"></span>&deg;<br />
+      longitude: <span id="longitude"></span>&deg;
+    </p> -->
+    <label for="mood">give icon a name</label>
+    <input id="mood" value="throbber" />
+    <button id="submit">submit</button>
+    <script src="sketch.js"></script>
+      <p class="bold">Oh hi,</p>
+      
+      <p>Tell me your hopes and dreams:</p>
+      
+      <form>
+        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
+        <button type="submit" id="submit-dream">Submit Dream</button>
+      </form>
+      
+      <section class="dreams">
+        <ul id="dreams"></ul>
+      </section>
+    </main>
+
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
